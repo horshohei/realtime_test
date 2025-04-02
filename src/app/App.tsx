@@ -253,7 +253,7 @@ function App() {
         voice: "coral",
         input_audio_format: "pcm16",
         output_audio_format: "pcm16",
-        input_audio_transcription: { model: "whisper-1" },
+        input_audio_transcription: { model: "gpt-4o-mini-transcribe" },
         turn_detection: turnDetection,
         tools,
       },
@@ -409,8 +409,8 @@ function App() {
         <div className="flex items-center">
           <div onClick={() => window.location.reload()} style={{ cursor: 'pointer' }}>
             <Image
-              src="/openai-logomark.svg"
-              alt="OpenAI Logo"
+              src="/sociocom.png"
+              alt="SociocomLogo"
               width={20}
               height={20}
               className="mr-2"

@@ -11,7 +11,16 @@ export async function GET() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "gpt-4o-realtime-preview-2024-12-17",
+          model: "gpt-4o-mini-realtime-preview-2024-12-17",
+            modalities: ["audio", "text"],
+            instructions: "あなたは日本人向けのアシスタントです。指示がない限り、日本語で応答してください。",
+            input_audio_noise_reduction: {
+                type: "near_field",
+            },
+            input_audio_transcription: {
+                language: "ja",
+                model: "gpt-4o-mini-transcribe"
+            }
         }),
       }
     );
